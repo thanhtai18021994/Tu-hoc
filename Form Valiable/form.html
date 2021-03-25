@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <form id="form-1">
+        <h3 class="heading">Thành Viên Đăng ký</h3>
+        <p id="desc">Cùng nhau học lập trình</p>
+        <div class="spacer">
+            <div class="form__Group">
+                <label for="fullName" form="form__lable">Họ Và Tên:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="VD:Bui Thanh Tai">
+                <span class="form__message"></span>
+            </div>
+            <div class="form__Group">
+                <label for="email" form="form__lable">Email</label>
+                <input type="text" id="email" name="email" placeholder="VD:taibui18021994@gmail.com">
+                <span class="form__message"></span>
+            </div>
+            <div class="form__Group">
+                <label for="name" form="form__lable">Họ Và Tên:</label>
+                <input type="text" id="name" name="name" placeholder="VD:Bui Thanh Tai">
+                <span class="form__message"></span>
+            </div>
+            <div class="form__Group">
+                <label for="name" form="form__lable">Họ Và Tên:</label>
+                <input type="text" id="name" name="name" placeholder="VD:Bui Thanh Tai">
+                <span class="form__message"></span>
+            </div>
+        </div>
+        <button id="form__summit">Đăng ký</button>
+    </form>
+    <!-- <script src="./validation.js"></script> -->
+    <script src="./js.js"></script>
+    <script >
+        validator({
+            form: '#form-1',
+            rules: [
+                validator.isRequired('#fullName'),
+                validator.isEmail('#email')
+            ]
+        })
+    </script>
+</body>
+
+</html>

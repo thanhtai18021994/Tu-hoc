@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // let str = 'abcbad';
+        // let myarr = str.split('')
+        // let myStr = myarr.join('--');
+        // // let check = false;
+        // // for (let i = 0; i < str.length; i++) {
+        // //     if (str[i] == str[str.length - i - 1]) {
+        // //         check = true;
+        // //     }
+        // // }
+        // // if (check) {
+        // //     alert('this is chuoi doi xung');
+        // // } else {
+        // //     alert('ko doi xung');
+        // // }
+        // console.log(myStr);
+        // let myDate = new Date('2021/2/13,18:02:56');
+        // let day = myDate.getDay();
+        // console.log(day);
+
+        // let arr1 = [1, 1];
+        let flag;
+        // for (let i = 1; arr1[i] <= 23; i++) {
+        //     arr1[i + 1] = arr1[i] + arr1[i - 1];
+        //     // console.log(arr1[i])
+        // }
+        // console.log(arr1);
+        // for (let i = 1; i < arr1.length; i++) {
+        //     for (let j = 0; j < arr.length; j++) {
+        //         if (arr[i] == arr1[j]) {
+        //             arr2.push(arr1[j]);
+        //         }
+        //     }
+        // }
+        // console.log(arr2);
+        // alert(arr2);
+        let arr2 = [];
+        for (let i = 3; i <= 21; i++) {
+            let check = true;
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    check = false;
+                    break;
+                }
+            }
+            if (check) {
+                arr2.push(i)
+            }
+        }
+        console.log(arr2);
+        console.log();
+        let arr = [1, 1, 2, 3, 5, 21, 8, 9, 11, 13];
+        let arr3 = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr2.length; j++) {
+                if (arr[i] === arr2[j]) {
+                    arr3.push(arr2[j]);
+                }
+            }
+        }
+        console.log(arr3);
+    </script>
+
+</body>
+
+</html>

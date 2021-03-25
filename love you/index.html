@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            text-align: center;
+            width: 400px;
+            height: 400px;
+        }
+        
+        #choose {
+            width: 200px;
+            /* display: flex; */
+            /* justify-content: space-around; */
+        }
+        
+        input {
+            width: 30px;
+            height: 30px;
+        
+        }
+        
+        #main {
+            width: 400px;
+            height: 400px;
+            background-image: url(./pngtree-simple-love-romantic-balloon-background-image_3152.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Do you love me ?</h1>
+        <div id="choose">
+            <input type="button" value="Yes " onclick="yesTag()" id="yesTag">
+            <input type="button" value="No" onmouseover="noTag()" id="noTag" style="position: absolute;">
+        </div>
+        <div id="noti"></div>
+    </div>
+    <script>
+        let no = document.getElementById('noTag');
+        let yes = document.getElementById('yesTag');
+        let noti = document.getElementById('noti');
+        let main = document.getElementById('choose')
+
+        function noTag() {
+            let a=Math.random() * 400 + 'px';
+            if(a<1)
+            no.style.top = Math.random() * 400 + 'px';
+            no.style.left = Math.random() * 400 + 'px';
+        }
+
+        function yesTag() {
+            noti.innerText = "Me too";
+        }
+    </script>
+</body>
+
+</html>

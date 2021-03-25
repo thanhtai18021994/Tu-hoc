@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>FORM
+    <div>DIV
+      <p>P</p>
+    </div>
+  </form>
+  <script>
+  form.onclick = function(event) {
+    event.target.style.backgroundColor = 'yellow';
+  
+    alert("target = " + event.target.tagName + ", this=" + this.tagName);
+  
+    event.target.style.backgroundColor = '';
+  };
+  </script>
+</body>
+</html>
